@@ -1,73 +1,73 @@
 N,Scenario,Structure,Operation,Time (seconds)
-1000,Casuale,Lista Concatenata,Insert,0.016527700005099177
-1000,Casuale,Lista Concatenata,Search Hit,0.008128299959935248
-1000,Casuale,Lista Concatenata,Search Miss,0.015450800070539117
-1000,Casuale,Lista Concatenata,Delete,0.006771899992600083
-1000,Casuale,ABR (Albero Binario di Ricerca),Insert,0.0012043999740853906
-1000,Casuale,ABR (Albero Binario di Ricerca),Search Hit,0.0002688000677153468
-1000,Casuale,ABR (Albero Binario di Ricerca),Search Miss,0.0004715000977739692
-1000,Casuale,ABR (Albero Binario di Ricerca),Delete,0.000408099964261055
-1000,Casuale,Tabella Hash,Insert,0.0004920000210404396
-1000,Casuale,Tabella Hash,Search Hit,7.999991066753864e-05
-1000,Casuale,Tabella Hash,Search Miss,0.0002592999953776598
-1000,Casuale,Tabella Hash,Delete,0.00012169999536126852
-1000,Ordinato,Lista Concatenata,Insert,0.01556129998061806
-1000,Ordinato,Lista Concatenata,Search Hit,0.007613399997353554
-1000,Ordinato,Lista Concatenata,Search Miss,0.01527830003760755
-1000,Ordinato,Lista Concatenata,Delete,0.008584999945014715
-1000,Ordinato,ABR (Albero Binario di Ricerca),Insert,0.023003200069069862
-1000,Ordinato,ABR (Albero Binario di Ricerca),Search Hit,0.010597800021059811
-1000,Ordinato,ABR (Albero Binario di Ricerca),Search Miss,0.021007200004532933
-1000,Ordinato,ABR (Albero Binario di Ricerca),Delete,0.005964800016954541
-1000,Ordinato,Tabella Hash,Insert,0.000529700075276196
-1000,Ordinato,Tabella Hash,Search Hit,7.90000194683671e-05
-1000,Ordinato,Tabella Hash,Search Miss,0.0002859000815078616
-1000,Ordinato,Tabella Hash,Delete,0.00011799996718764305
-5000,Casuale,Lista Concatenata,Insert,0.4154261000221595
-5000,Casuale,Lista Concatenata,Search Hit,0.20039020001422614
-5000,Casuale,Lista Concatenata,Search Miss,0.389130900031887
-5000,Casuale,Lista Concatenata,Delete,0.16514970001298934
-5000,Casuale,ABR (Albero Binario di Ricerca),Insert,0.005913899978622794
-5000,Casuale,ABR (Albero Binario di Ricerca),Search Hit,0.0016403000336140394
-5000,Casuale,ABR (Albero Binario di Ricerca),Search Miss,0.002633300027810037
-5000,Casuale,ABR (Albero Binario di Ricerca),Delete,0.0023581000277772546
-5000,Casuale,Tabella Hash,Insert,0.0025190000887960196
-5000,Casuale,Tabella Hash,Search Hit,0.00043409992940723896
-5000,Casuale,Tabella Hash,Search Miss,0.0013098999625071883
-5000,Casuale,Tabella Hash,Delete,0.0006559999892488122
-5000,Ordinato,Lista Concatenata,Insert,0.39683149999473244
-5000,Ordinato,Lista Concatenata,Search Hit,0.1930447000777349
-5000,Ordinato,Lista Concatenata,Search Miss,0.38990100007504225
-5000,Ordinato,Lista Concatenata,Delete,0.2097154000075534
-5000,Ordinato,ABR (Albero Binario di Ricerca),Insert,0.5799066999461502
-5000,Ordinato,ABR (Albero Binario di Ricerca),Search Hit,0.2636573000345379
-5000,Ordinato,ABR (Albero Binario di Ricerca),Search Miss,0.5354811999714002
-5000,Ordinato,ABR (Albero Binario di Ricerca),Delete,0.15110520005691797
-5000,Ordinato,Tabella Hash,Insert,0.04121019993908703
-5000,Ordinato,Tabella Hash,Search Hit,0.0004501000512391329
-5000,Ordinato,Tabella Hash,Search Miss,0.0015431999927386642
-5000,Ordinato,Tabella Hash,Delete,0.0007249999325722456
-10000,Casuale,Lista Concatenata,Insert,1.7069260999560356
-10000,Casuale,Lista Concatenata,Search Hit,0.8234092000639066
-10000,Casuale,Lista Concatenata,Search Miss,1.6026669000275433
-10000,Casuale,Lista Concatenata,Delete,0.6899238000623882
-10000,Casuale,ABR (Albero Binario di Ricerca),Insert,0.012481199926696718
-10000,Casuale,ABR (Albero Binario di Ricerca),Search Hit,0.0043141000205650926
-10000,Casuale,ABR (Albero Binario di Ricerca),Search Miss,0.005786500056274235
-10000,Casuale,ABR (Albero Binario di Ricerca),Delete,0.005820099962875247
-10000,Casuale,Tabella Hash,Insert,0.006259799934923649
-10000,Casuale,Tabella Hash,Search Hit,0.001996500068344176
-10000,Casuale,Tabella Hash,Search Miss,0.002750999992713332
-10000,Casuale,Tabella Hash,Delete,0.0018112999387085438
-10000,Ordinato,Lista Concatenata,Insert,1.6362727000378072
-10000,Ordinato,Lista Concatenata,Search Hit,0.797882099985145
-10000,Ordinato,Lista Concatenata,Search Miss,1.5977053999667987
-10000,Ordinato,Lista Concatenata,Delete,0.8567131999880075
-10000,Ordinato,ABR (Albero Binario di Ricerca),Insert,2.388678599963896
-10000,Ordinato,ABR (Albero Binario di Ricerca),Search Hit,1.1173185999505222
-10000,Ordinato,ABR (Albero Binario di Ricerca),Search Miss,2.20543940004427
-10000,Ordinato,ABR (Albero Binario di Ricerca),Delete,0.6329865999286994
-10000,Ordinato,Tabella Hash,Insert,0.03503240004647523
-10000,Ordinato,Tabella Hash,Search Hit,0.0012770999455824494
-10000,Ordinato,Tabella Hash,Search Miss,0.0032181000569835305
-10000,Ordinato,Tabella Hash,Delete,0.001449699979275465
+1000,Casuale,Lista Concatenata,Insert,0.04169790000014473
+1000,Casuale,Lista Concatenata,Search Hit,0.01999960000102874
+1000,Casuale,Lista Concatenata,Search Miss,0.038267500000074506
+1000,Casuale,Lista Concatenata,Delete,0.015854099998250604
+1000,Casuale,ABR (Albero Binario di Ricerca),Insert,0.0026556000011623837
+1000,Casuale,ABR (Albero Binario di Ricerca),Search Hit,0.000720199997886084
+1000,Casuale,ABR (Albero Binario di Ricerca),Search Miss,0.0011328999971738085
+1000,Casuale,ABR (Albero Binario di Ricerca),Delete,0.0016366999989259057
+1000,Casuale,Tabella Hash,Insert,0.0014012999963597395
+1000,Casuale,Tabella Hash,Search Hit,0.0003528000015649013
+1000,Casuale,Tabella Hash,Search Miss,0.0006450000000768341
+1000,Casuale,Tabella Hash,Delete,0.0003825999956461601
+1000,Ordinato,Lista Concatenata,Insert,0.03871160000562668
+1000,Ordinato,Lista Concatenata,Search Hit,0.026368300001195166
+1000,Ordinato,Lista Concatenata,Search Miss,0.039144099995610304
+1000,Ordinato,Lista Concatenata,Delete,0.02048750000540167
+1000,Ordinato,ABR (Albero Binario di Ricerca),Insert,0.054028599995945115
+1000,Ordinato,ABR (Albero Binario di Ricerca),Search Hit,0.024102399998810142
+1000,Ordinato,ABR (Albero Binario di Ricerca),Search Miss,0.04834399999526795
+1000,Ordinato,ABR (Albero Binario di Ricerca),Delete,0.015785600000526756
+1000,Ordinato,Tabella Hash,Insert,0.0011889000015798956
+1000,Ordinato,Tabella Hash,Search Hit,0.0002576000042608939
+1000,Ordinato,Tabella Hash,Search Miss,0.0006563999995705672
+1000,Ordinato,Tabella Hash,Delete,0.00032449999707750976
+5000,Casuale,Lista Concatenata,Insert,1.0244126000034157
+5000,Casuale,Lista Concatenata,Search Hit,0.5181279000025825
+5000,Casuale,Lista Concatenata,Search Miss,1.1009835000004387
+5000,Casuale,Lista Concatenata,Delete,0.4067007000048761
+5000,Casuale,ABR (Albero Binario di Ricerca),Insert,0.014690600000903942
+5000,Casuale,ABR (Albero Binario di Ricerca),Search Hit,0.006023500005539972
+5000,Casuale,ABR (Albero Binario di Ricerca),Search Miss,0.007945999997900799
+5000,Casuale,ABR (Albero Binario di Ricerca),Delete,0.007273600000189617
+5000,Casuale,Tabella Hash,Insert,0.007990700003574602
+5000,Casuale,Tabella Hash,Search Hit,0.002387000000453554
+5000,Casuale,Tabella Hash,Search Miss,0.005814999996800907
+5000,Casuale,Tabella Hash,Delete,0.002953199997136835
+5000,Ordinato,Lista Concatenata,Insert,1.0463563000012073
+5000,Ordinato,Lista Concatenata,Search Hit,0.4873520999972243
+5000,Ordinato,Lista Concatenata,Search Miss,1.0027711000002455
+5000,Ordinato,Lista Concatenata,Delete,0.5641152000025613
+5000,Ordinato,ABR (Albero Binario di Ricerca),Insert,1.5790737999996054
+5000,Ordinato,ABR (Albero Binario di Ricerca),Search Hit,0.6667586000039591
+5000,Ordinato,ABR (Albero Binario di Ricerca),Search Miss,1.4696646000011242
+5000,Ordinato,ABR (Albero Binario di Ricerca),Delete,0.4126481999992393
+5000,Ordinato,Tabella Hash,Insert,0.00692469999921741
+5000,Ordinato,Tabella Hash,Search Hit,0.001065999997081235
+5000,Ordinato,Tabella Hash,Search Miss,0.006361799998558126
+5000,Ordinato,Tabella Hash,Delete,0.006146100000478327
+10000,Casuale,Lista Concatenata,Insert,5.239599599997746
+10000,Casuale,Lista Concatenata,Search Hit,2.3845647999987705
+10000,Casuale,Lista Concatenata,Search Miss,4.974052700003085
+10000,Casuale,Lista Concatenata,Delete,1.920759000000544
+10000,Casuale,ABR (Albero Binario di Ricerca),Insert,0.039801599996280856
+10000,Casuale,ABR (Albero Binario di Ricerca),Search Hit,0.012783800004399382
+10000,Casuale,ABR (Albero Binario di Ricerca),Search Miss,0.021650199996656738
+10000,Casuale,ABR (Albero Binario di Ricerca),Delete,0.017413599998690188
+10000,Casuale,Tabella Hash,Insert,0.016492599999764934
+10000,Casuale,Tabella Hash,Search Hit,0.004695499999797903
+10000,Casuale,Tabella Hash,Search Miss,0.0066693000044324435
+10000,Casuale,Tabella Hash,Delete,0.004504399999859743
+10000,Ordinato,Lista Concatenata,Insert,4.958549900002254
+10000,Ordinato,Lista Concatenata,Search Hit,2.113686400000006
+10000,Ordinato,Lista Concatenata,Search Miss,5.037921399998595
+10000,Ordinato,Lista Concatenata,Delete,2.4428040999991936
+10000,Ordinato,ABR (Albero Binario di Ricerca),Insert,7.024864400002116
+10000,Ordinato,ABR (Albero Binario di Ricerca),Search Hit,3.2458341999954428
+10000,Ordinato,ABR (Albero Binario di Ricerca),Search Miss,7.602167000004556
+10000,Ordinato,ABR (Albero Binario di Ricerca),Delete,2.294212699998752
+10000,Ordinato,Tabella Hash,Insert,0.07617530000425177
+10000,Ordinato,Tabella Hash,Search Hit,0.002460399999108631
+10000,Ordinato,Tabella Hash,Search Miss,0.007840900005248841
+10000,Ordinato,Tabella Hash,Delete,0.0037262999976519495
