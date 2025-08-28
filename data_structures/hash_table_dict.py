@@ -19,7 +19,7 @@ class HashTableDict:
         """
         Inizializzo la tabella hash, uso numero primo come size per migliorare la distribuzione delle chiavi
         e ridurre collisioni
-        self.table è una lista Python che fungo da array, inizializzo la tabella con None
+        self.table è una lista Python che funge da array, inizializzo la tabella con None
         """
         self.size = size
         self.table = [None] * self.size                             # ogni cella verrà chiamata 'slot'
@@ -30,7 +30,7 @@ class HashTableDict:
         return key % self.size                                      # uso l'operatore modulo
 
     def insert(self, key, value):
-        index = self._hash(key)                                      # calcolo indice dello slot usando la funzione hash
+        index = self._hash(key)                                     # calcolo indice dello slot usando la funzione hash
         head = self.table[index]                                    # accedo alla testa della lista nello slot
 
         current = head                                              # scorro la lista per vedere se chiave esiste già
