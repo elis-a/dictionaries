@@ -40,7 +40,7 @@ class HashTableDict:
                 return
             current = current.next
 
-        # creo un nuovo nodo se la chiave non esiste e lo inserisco in testa alla lista
+        # Creo un nuovo nodo se la chiave non esiste e lo inserisco in testa alla lista
         new_node = Node(key, value)
         new_node.next = head                                        # il next del nuovo nodo punta alla vecchia testa
         self.table[index] = new_node                                # aggiorno la testa della lista nello slot
@@ -69,10 +69,11 @@ class HashTableDict:
                     previous.next = current.next                    # se la chiave da cancellare non è in testa
                 return                                              # cancellazione
 
-            previous = current                                          # scorro la lista aggiornando previous e current
+            previous = current                                      # scorro la lista aggiornando previous e current
             current = current.next
 
-        raise KeyError(f"Impossibile cancellare: la chiave '{key}' non è presente.") # se non trovo la chiave lancio ecc
+        # Se non trovo la chiave lancio un'eccezione
+        raise KeyError(f"Impossibile cancellare: la chiave '{key}' non è presente.")
 
     def __str__(self):
         elements = []

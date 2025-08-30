@@ -51,7 +51,7 @@ class ABRDict:
             else:                                       # chiave trovata
                 return current.value
 
-        # se non trovo la chiave, lancio un'eccezione
+        # Se non trovo la chiave, lancio un'eccezione
         raise KeyError(f"La chiave '{key}' non è presente nel dizionario.")
 
     def delete(self, key):
@@ -65,7 +65,7 @@ class ABRDict:
             else:                                       # se la chiave è maggiore, vado a destra
                 current = current.right
 
-        # se non trovo la chiave, lancio un'eccezione
+        # Se non trovo la chiave, lancio un'eccezione
         if current is None:
             raise KeyError(f"Impossibile cancellare: la chiave '{key}' non è presente.")
 
@@ -110,7 +110,7 @@ class ABRDict:
 
     def __str__(self):
         elements = []
-        self._build_str_in_order(self.root, elements)   # inorder-tree-walk per ottenere gli elementi in ordine
+        self._build_str_in_order(self.root, elements)           # inorder-tree-walk per ottenere gli elementi in ordine
         return "{ " + ", ".join(elements) + " }"
 
     def _build_str_in_order(self, node, elements):

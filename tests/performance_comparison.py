@@ -1,12 +1,12 @@
 import time, random, sys, os
 import numpy as np
 import matplotlib.pyplot as plt
-import csv  # Nuovo import per la gestione dei file CSV
+import csv                                                  # nuovo import per la gestione dei file CSV
 
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, project_root)
 
-# se le strutture vengono importate male, lancio di un errore più chiaro e intuitivo
+# Se le strutture vengono importate male, lancio di un errore più chiaro e intuitivo
 try:
     from data_structures.hash_table_dict import HashTableDict
     from data_structures.abr_dict import ABRDict
@@ -21,9 +21,9 @@ def run_performance_test(dict_class, keys_to_insert, keys_to_search, keys_to_del
     # Per HashTableDict scelgo una dimensione che sia un numero primo
     # e maggiore del numero di elementi per ridurre le collisioni
     if dict_class == HashTableDict:
-        size = len(keys_to_insert) * 2 + 1                          # dimensione circa il doppio delle chiavi
+        size = len(keys_to_insert) * 2 + 1                                  # dimensione circa il doppio delle chiavi
         while not all(size % i for i in range(2, int(size ** 0.5) + 1)):    # controllo di primalità
-            size += 2                                               # sennò passa al prossimo numero dispari
+            size += 2                                                       # sennò passa al prossimo numero dispari
         dict_instance = dict_class(size=size)
     else:
         dict_instance = dict_class()
@@ -31,7 +31,7 @@ def run_performance_test(dict_class, keys_to_insert, keys_to_search, keys_to_del
     results = {}
 
     # Test INSERIMENTO
-    start_time_insert = time.perf_counter()                         # misuro il tempo per l'inserimento delle chiavi
+    start_time_insert = time.perf_counter()                         # tempo per l'inserimento delle chiavi
     for key in keys_to_insert:
         dict_instance.insert(key, f"value_{key}")
     end_time_insert = time.perf_counter()
@@ -56,7 +56,7 @@ def run_performance_test(dict_class, keys_to_insert, keys_to_search, keys_to_del
     results['search_miss'] = end_time_search_miss - start_time_search_miss
 
     # Test CANCELLAZIONE
-    start_time_delete = time.perf_counter()                         # misuro il tempo per la cancellazione delle chiavi
+    start_time_delete = time.perf_counter()                         # tempo per la cancellazione delle chiavi
     for key in keys_to_delete:
         dict_instance.delete(key)
     end_time_delete = time.perf_counter()
@@ -84,21 +84,20 @@ def plot_results(results_data, n, scenario):
 
     ax.set_ylabel('Tempo (secondi)')                                # aggiungo etichette, titolo e legenda
     # Uso la scala logaritmica per visualizzare meglio le grandi differenze di tempo
-    # è particolarmente utile quando ci sono ordini di grandezza diversi tra le strutture
     ax.set_yscale('log')
     ax.set_title(f'Performance per N = {n} con chiavi in ordine {scenario} (scala logaritmica)')
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
     ax.legend()
 
-    # etichette con i valori sopra le barre
+    # Etichette con i valori sopra le barre
     ax.bar_label(rects1, padding=3, fmt='%.5f')
     ax.bar_label(rects2, padding=3, fmt='%.5f')
     ax.bar_label(rects3, padding=3, fmt='%.5f')
 
     fig.tight_layout()
 
-    # salvo il grafico in un file
+    # Salvo il grafico in un file
     filename = f"performance_{n}_{scenario.lower().replace(' ', '_')}.png"
     plt.savefig(filename)
     print(f"\nGrafico salvato come: {filename}\n")
@@ -106,10 +105,10 @@ def plot_results(results_data, n, scenario):
 
 
 def main():
-    # numero di elementi da testare
+    # Numero di elementi da testare
     sizes = [1000, 5000, 10000]
 
-    # strutture dati da testare
+    # Strutture dati da testare
     structures = {
         "Lista Concatenata": LinkedListDict,
         "ABR (Albero Binario di Ricerca)": ABRDict,
@@ -118,7 +117,7 @@ def main():
 
     print("Inizio del confronto delle performance dei dizionari...\n")
 
-    # lista per raccogliere tutti i risultati per il salvataggio CSV
+    # Lista per raccogliere tutti i risultati per il salvataggio CSV
     all_results_for_csv = []
 
     for n in sizes:
@@ -128,15 +127,15 @@ def main():
 
         # DATI CASUALI
         print("\n--- CASO 1: Dati con chiavi CASUALI ---\n")
-        random_keys = random.sample(range(n * 10), n)  # random.sample garantisce l'assenza di duplicati
+        random_keys = random.sample(range(n * 10), n)               # random.sample garantisce l'assenza di duplicati
 
-        # estraggo sottoinsiemi disgiunti per ricerca e cancellazione
+        # Estraggo sottoinsiemi disgiunti per ricerca e cancellazione
         search_keys_subset = random.sample(random_keys, n // 2)
-        # rimuovo le chiavi usate per la ricerca dal pool per la cancellazione
+        # Rimuovo le chiavi usate per la ricerca dal pool per la cancellazione
         remaining_keys = list(set(random_keys) - set(search_keys_subset))
         delete_keys_subset = random.sample(remaining_keys, n // 2)
 
-        # dizionario per raccogliere i risultati di questo scenario per il plotting
+        # Dizionario per raccogliere i risultati di questo scenario per il plotting
         results_random = {}
         for name, dict_class in structures.items():
             results = run_performance_test(
@@ -152,7 +151,7 @@ def main():
             print(f"    - Ricerca (senza successo):  {results['search_miss']:.6f} secondi")
             print(f"    - Cancellazione:             {results['delete']:.6f} secondi")
 
-            # aggiungo i risultati al dizionario per il CSV
+            # Aggiungo i risultati al dizionario per il CSV
             for op_name, op_time in results.items():
                 all_results_for_csv.append({
                     'N': n,
@@ -162,18 +161,19 @@ def main():
                     'Time (seconds)': op_time
                 })
 
-        # chiamo la funzione per creare il grafico dello scenario casuale
+        # Chiamo la funzione per creare il grafico dello scenario casuale
         plot_results(results_random, n, "Casuale")
 
         # DATI ORDINATI
         print("\n--- CASO 2: Dati con chiavi ORDINATE (crescenti) ---\n")
         ordered_keys = list(range(n))  # chiavi ordinate da 0 a n-1
 
-        # per il test di ricerca e cancellazione uso chiavi alternate
-        keys_for_search = ordered_keys[::2]  # prendo elementi con indici pari
-        keys_for_delete = ordered_keys[1::2]  # prendo elementi con indici dispari
+        # Per il test di ricerca e cancellazione uso chiavi alternate
+        keys_for_search = ordered_keys[::2]                         # prendo elementi con indici pari
+        keys_for_delete = ordered_keys[1::2]                        # prendo elementi con indici dispari
 
-        results_ordered = {}  # dizionario per raccogliere i risultati di questo scenario per il plotting
+        # Dizionario per raccogliere i risultati di questo scenario per il plotting
+        results_ordered = {}
         for name, dict_class in structures.items():
             results = run_performance_test(
                 dict_class,
@@ -188,7 +188,7 @@ def main():
             print(f"    - Ricerca (senza successo):  {results['search_miss']:.6f} secondi")
             print(f"    - Cancellazione:             {results['delete']:.6f} secondi")
 
-            # aggiungo i risultati al dizionario per il CSV
+            # Aggiungo i risultati al dizionario per il CSV
             for op_name, op_time in results.items():
                 all_results_for_csv.append({
                     'N': n,
@@ -198,16 +198,16 @@ def main():
                     'Time (seconds)': op_time
                 })
 
-        # chiamo la funzione per creare il grafico dello scenario ordinato
+        # Chiamo la funzione per creare il grafico dello scenario ordinato
         plot_results(results_ordered, n, "Ordinato")
 
     print(f"\n======================================================")
     print("Test completati.")
     print(f"======================================================")
 
-    # salvataggio di tutti i risultati numerici in un file CSV
+    # Salvataggio di tutti i risultati numerici in un file CSV
     csv_filename = "performance_results.csv"
-    # definisco l'ordine delle colonne (intestazioni)
+    # Definisco l'ordine delle colonne (intestazioni)
     fieldnames = ['N', 'Scenario', 'Structure', 'Operation', 'Time (seconds)']
 
     with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
